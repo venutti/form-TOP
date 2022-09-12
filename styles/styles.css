@@ -52,7 +52,7 @@ main {
     background-color: #f3f3f3;
 
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .container-form .text {
     padding: 1.5rem 2.5rem;
@@ -61,7 +61,7 @@ main {
     color: #89c530;
     font-family: 'Kristi', cursive;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .container-form form {
     box-shadow: 10px 5px 10px #d3d3d3;
@@ -100,13 +100,13 @@ main {
 #main-form label {
     font-weight: 500;
     color: #969696;
-    font-size: 1rem;
+    font-size: .7rem;
     width: 100%;
 }
 #main-form input {
     width: 300px;
     padding: 0.5rem 1rem;
-    font-size: 16px;
+    font-size: 14px;
     outline: 0;
     border: 1px solid grey;
     border-radius: 5px;
@@ -124,7 +124,7 @@ main {
     }
 }
 #main-form input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
     color: black;
     opacity: 0.3;
 }
@@ -133,7 +133,7 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    font-size: 14px;
+    font-size: 12px;
     transition: opacity 0.5s ease;
     opacity: .8;
 }
