@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Roboto:wght@100;400;500&display=swap');
+/*
+font-family: 'Kristi', cursive; (400)
+font-family: 'Roboto', sans-serif; (100,400,500)
+*/
+/*GENERAL LAYOUT*/
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    main {
+        flex-direction: row;
+    }
+}
+/*LOGO LAYOUT*/
+.container-bg-img {
+    background-image: url("../img/bg-landscape.jpg");
+    background-size: cover;
+    background-position-y: bottom 20%;
+
+    min-height: 400px;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-bg-img .logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    margin-top: 100px;
+}
+
+.container-bg-img .logo {
+    width: 80px;
+    filter: invert(100%);
+}
+
+.container-bg-img h1 {
+    color: white;
+    font-family: 'Kristi', cursive;
+    font-size: 4rem;
+    margin: 0;
+}
