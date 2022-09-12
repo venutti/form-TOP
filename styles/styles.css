@@ -167,10 +167,12 @@ main {
 }
 #main-form input:valid + span::before{
     color: green;
+    content:"✔";
 }
 /*PLACEHOLDER*/
 #main-form input:placeholder-shown {
     border-color: grey;
+    color: grey;
 }
 #main-form input:placeholder-shown + span::before {
     opacity: 0;
