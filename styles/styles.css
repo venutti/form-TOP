@@ -4,13 +4,11 @@ font-family: 'Kristi', cursive; (400)
 font-family: 'Roboto', sans-serif; (100,400,500)
 */
 /*GENERAL LAYOUT*/
-
 main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
 @media (min-width: 666px) {
     main {
         flex-direction: row;
@@ -28,7 +26,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 .container-bg-img .logo-title {
     display: flex;
     align-items: center;
@@ -38,24 +35,20 @@ main {
     padding: 2.5rem;
     margin-top: 100px;
 }
-
 .container-bg-img .logo {
     width: 80px;
     filter: invert(100%);
 }
-
 .container-bg-img h1 {
     color: white;
     font-family: 'Kristi', cursive;
     font-size: 4rem;
     margin: 0;
 }
-
 /*FORM LAYOUT*/
 .container-form {
     flex: 2;
 
-    padding-top: 4rem;
     background-color: #f3f3f3;
 
     font-family: 'Roboto', sans-serif;
@@ -70,11 +63,10 @@ main {
     text-transform: uppercase;
     font-size: 2.5rem;
 }
-
 .container-form form {
     box-shadow: 10px 5px 10px #d3d3d3;
     background-color: white;
-    padding: 1.5rem;
+    padding: 2.5rem;
 }
 .container-form h2 {
     margin: 0;
@@ -96,4 +88,94 @@ main {
 .container-form .login {
     text-decoration: none;
     color: #89c530;
+}
+/*FORM STYLES*/
+#main-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+#main-form h2 {
+    width: 100%;
+}
+#main-form label {
+    font-weight: 500;
+    color: #969696;
+    font-size: 1rem;
+    width: 100%;
+}
+#main-form input {
+    width: 300px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    outline: 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#main-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+    position:relative;
+}
+@media (min-width: 900px) {
+    #main-form .form-row {
+        width: 50%;
+    }
+}
+#main-form input::placeholder {
+    font-size: 16px;
+    color: black;
+    opacity: 0.3;
+}
+/*MENSAJES*/
+#main-form span::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 14px;
+    transition: opacity 0.5s ease;
+    opacity: .8;
+}
+/*ERROR MSJ*/
+#main-form input:invalid {
+    color: red;
+    border-color: red;
+}
+#main-form input:invalid + span::before{
+    color: red;
+}
+#main-form input[type="text"]:invalid + span::before{
+    content: "* Ingresa más de 3 letras"
+}
+#main-form input[type="email"]:invalid + span::before{
+    content: "* Ingresa un email de la forma prueba@prueba.com"
+}
+#main-form input[type="tel"]:invalid + span::before{
+    content: "* El número debe tener entre 8 y 10 dígitos"
+}
+#main-form input[type="password"]:invalid + span::before{
+    content: "* Ingresa al menos 3 letras, números o símbolos"
+}
+#main-form #confirm-password:invalid + span::before{
+    content: "* Las contraseñas no coinciden"
+}
+/*VALID MSJ*/
+#main-form input:valid {
+    border-color: green;
+}
+#main-form input:valid + span::before{
+    color: green;
+}
+/*PLACEHOLDER*/
+#main-form input:placeholder-shown {
+    border-color: grey;
+}
+#main-form input:placeholder-shown + span::before {
+    opacity: 0;
+}
+/*FOCUS*/
+#main-form input:focus {
+    box-shadow: 0px 1px 5px grey;
+    border-color: blue;
 }

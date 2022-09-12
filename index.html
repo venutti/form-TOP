@@ -7,6 +7,7 @@
     <title>TRAVELX - ¡Registrate ahora!</title>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <main>
@@ -27,27 +28,39 @@
                 <h2>Regístrate</h2>
                 <div class="form-row">
                     <label for="first-name">NOMBRE</label>
-                    <input type="text" id="first-name" name="first-name">
+                    <input type="text" id="first-name" name="first-name" required
+                    minlength="3" placeholder="Max">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="last-name">APELLIDO</label>
-                    <input type="text" id="last-name" name="last-name">
+                    <input type="text" id="last-name" name="last-name" required
+                    minlength="3" placeholder="Power">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required
+                    placeholder="sample@sample.com">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="tel">TELEFONO</label>
-                    <input type="tel" id="tel" name="tel">
+                    <input type="tel" id="tel" name="tel" required
+                    placeholder="44440000" pattern="[0-9]{8,10}">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="password">CONTRASEÑA</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required
+                    placeholder="********" minlength="3">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="confirm-password">CONFIRME CONTRASEÑA</label>
-                    <input type="password" id="confirm-password" name="confirm-password">
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                    placeholder="********" minlength="3">
+                    <span></span>
                 </div>
             </form>
 
