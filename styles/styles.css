@@ -4,6 +4,9 @@ font-family: 'Kristi', cursive; (400)
 font-family: 'Roboto', sans-serif; (100,400,500)
 */
 /*GENERAL LAYOUT*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 main {
     min-height: 100vh;
     display: flex;
@@ -93,6 +96,7 @@ main {
 #main-form {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 20px;
 }
 #main-form h2 {
     width: 100%;
@@ -101,10 +105,12 @@ main {
     font-weight: 500;
     color: #969696;
     font-size: .7rem;
+    display: block;
     width: 100%;
 }
 #main-form input {
-    width: 300px;
+    display: block;
+    width: 100%;
     padding: 0.5rem 1rem;
     font-size: 14px;
     outline: 0;
@@ -112,16 +118,11 @@ main {
     border-radius: 5px;
 }
 #main-form .form-row {
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
     margin-top: 1.5rem;
 
     position:relative;
-}
-@media (min-width: 900px) {
-    #main-form .form-row {
-        width: 50%;
-    }
 }
 #main-form input::placeholder {
     font-size: 14px;
