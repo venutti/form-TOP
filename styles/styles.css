@@ -11,7 +11,7 @@ main {
     flex-direction: column;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 666px) {
     main {
         flex-direction: row;
     }
@@ -20,7 +20,7 @@ main {
 .container-bg-img {
     background-image: url("../img/bg-landscape.jpg");
     background-size: cover;
-    background-position-y: bottom 20%;
+    background-position: right 50% bottom 20%;
 
     min-height: 400px;
 
@@ -49,4 +49,51 @@ main {
     font-family: 'Kristi', cursive;
     font-size: 4rem;
     margin: 0;
+}
+
+/*FORM LAYOUT*/
+.container-form {
+    flex: 2;
+
+    padding-top: 4rem;
+    background-color: #f3f3f3;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+.container-form .text {
+    padding: 1.5rem 2.5rem;
+}
+.container-form .impact {
+    color: #89c530;
+    font-family: 'Kristi', cursive;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.container-form form {
+    box-shadow: 10px 5px 10px #d3d3d3;
+    background-color: white;
+    padding: 1.5rem;
+}
+.container-form h2 {
+    margin: 0;
+    font-weight: 500;
+}
+.container-form button {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    background-color: #89c530;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+}
+.container-form button:hover {
+    transition: background-color 0.5s ease;
+    background-color: #5b861a;
+}
+.container-form .login {
+    text-decoration: none;
+    color: #89c530;
 }
